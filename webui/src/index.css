@@ -1,0 +1,17 @@
+html {
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  background-color: #fcfcfc;
+}
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+:root body {
+  position: absolute;
+}
+body {
+  width: 100vw;
+  overflow: hidden;
+}
