@@ -30,7 +30,6 @@ func (b *binaryFileSystem) Open(name string) (http.File, error) {
 }
 
 func (b *binaryFileSystem) Exists(prefix string, filepath string) bool {
-
     if p := strings.TrimPrefix(filepath, prefix); len(p) < len(filepath) {
         if _, err := b.fs.Open(p); err != nil {
             return false
@@ -42,7 +41,12 @@ func (b *binaryFileSystem) Exists(prefix string, filepath string) bool {
 
 // BinaryFileSystem bindata2gin
 func BinaryFileSystem(root string) *binaryFileSystem {
-    fs := &assetfs.AssetFS{utils.Asset, utils.AssetDir, utils.AssetInfo, root}
+    fs := &assetfs.AssetFS{
+        Asset: utils.Asset,
+        AssetDir: utils.AssetDir,
+        AssetInfo: utils.AssetInfo,
+        Prefix: root,
+    }
     return &binaryFileSystem{fs}
 }
 
