@@ -6,17 +6,19 @@
 + React 构建用户界面
 + [lorca](https://github.com/zserge/lorca) 连接 Golang 和 React
 
-#### 运行环境
+## 运行环境
 
-+ Golang 1.16
-+ Node.js 12 LTS
++ Golang 1.16+
++ Node.js 12+
 + React 17
-+ material-ui 4.11
++ [mui](https://github.com/mui-org/material-ui) 5.x
 
 可选
+
 + [upx](https://upx.github.io/)
 
-#### 项目打包
+## 项目打包
+
 ```go
 // webui 目录下打包静态文件
 yarn build
