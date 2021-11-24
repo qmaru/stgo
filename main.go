@@ -4,6 +4,7 @@ import (
 	"embed"
 	"io/fs"
 	"log"
+
 	"stgo/apis"
 
 	"github.com/zserge/lorca"
@@ -21,7 +22,7 @@ func SPAIndex() fs.FS {
 
 // RunUI 图形界面
 func RunUI(addr string) error {
-	ui, err := lorca.New("", "", 800, 600)
+	ui, err := lorca.New("", "", 480, 800)
 	if err != nil {
 		return err
 	}
